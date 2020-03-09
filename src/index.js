@@ -1,10 +1,10 @@
-const rememberAll = (remberItems = 0) => source => {
+const rememberAll = (rememberItems = 0) => source => {
   let store = [];
   let sinks = [];
   let ask;
   let done = false;
 
-  const sliceNum = remberItems > 0 ? -1 * remberItems : 0;
+  const sliceNum = rememberItems > 0 ? -1 * rememberItems : 0;
 
   source(0, (type, data) => {
     if (type === 0) {
@@ -49,4 +49,4 @@ const rememberAll = (remberItems = 0) => source => {
   };
 };
 
-export default rememberAll;
+module.exports = rememberAll;
